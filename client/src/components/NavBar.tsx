@@ -7,34 +7,17 @@ import ChatIcon from "@mui/icons-material/Chat";
 import ShopIcon from "@mui/icons-material/Shop";
 import StoreIcon from "@mui/icons-material/Store";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-// import { logout, reset } from "../auth/authSlice";
-// import { clearCart } from "../redux/actions/cartActions";
-// import { RootState } from "../store"; // Replace with your actual RootState path
 
 const NavBar: React.FC = () => {
-//   const navigate = useNavigate();
-//   const dispatch = useDispatch();
-//   const client = useSelector((state: RootState) => state.auth.client);
     const client = ''
-//   const cart = useSelector((state: RootState) => state.cart);
-//   const { cartItems } = cart;
-
-//   const onLogout = () => {
-//     dispatch(logout());
-//     dispatch(clearCart());
-//     dispatch(reset());
-//     navigate("/");
-//   };
 
   const getCartCount = (): number => {
-    // return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
     return 1;
   };
 
   return (
     <AppBar position="static" color="primary" sx={{ width: "100%" }}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        {/* Logo */}
         <Typography
           variant="h6"
           component={Link}
@@ -44,7 +27,7 @@ const NavBar: React.FC = () => {
             textDecoration: "none",
             display: "flex",
             alignItems: "center",
-            padding: "0 16px", // Add padding around the logo
+            padding: "0 16px",
           }}
         >
           <StoreIcon sx={{ marginRight: 1 }} />
@@ -59,7 +42,7 @@ const NavBar: React.FC = () => {
                 component={Link}
                 to="/cart"
                 color="inherit"
-                sx={{ padding: "8px 16px" }} // Add padding to the IconButton
+                sx={{ padding: "8px 16px" }}
               >
                 <Badge badgeContent={getCartCount()} color="secondary">
                   <ShoppingCartIcon />
@@ -70,7 +53,7 @@ const NavBar: React.FC = () => {
                 to="/shop"
                 color="inherit"
                 startIcon={<ShopIcon />}
-                sx={{ padding: "8px 16px" }} // Add padding to the Button
+                sx={{ padding: "8px 16px" }}
               >
                 Shop
               </Button>
@@ -79,15 +62,14 @@ const NavBar: React.FC = () => {
                 to="/chat"
                 color="inherit"
                 startIcon={<ChatIcon />}
-                sx={{ padding: "8px 16px" }} // Add padding to the Button
+                sx={{ padding: "8px 16px" }}
               >
                 Chat
               </Button>
               <Button
-                // onClick={onLogout}
                 color="inherit"
                 startIcon={<FaSignOutAlt />}
-                sx={{ padding: "8px 16px" }} // Add padding to the Button
+                sx={{ padding: "8px 16px" }}
               >
                 Logout
               </Button>
@@ -99,7 +81,7 @@ const NavBar: React.FC = () => {
                 to="/login"
                 color="inherit"
                 startIcon={<FaSignInAlt />}
-                sx={{ padding: "8px 16px" }} // Add padding to the Button
+                sx={{ padding: "8px 16px" }}
               >
                 Login
               </Button>
@@ -108,7 +90,7 @@ const NavBar: React.FC = () => {
                 to="/register"
                 color="inherit"
                 startIcon={<FaUser />}
-                sx={{ padding: "8px 16px" }} // Add padding to the Button
+                sx={{ padding: "8px 16px" }}
               >
                 Register
               </Button>

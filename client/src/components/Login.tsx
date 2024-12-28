@@ -31,34 +31,10 @@ export default function CredentialsSignInPage() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign Up
+            Sign In
           </Typography>
           <Box component="form" noValidate sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="fname"
-                  name="firstName"
-                  variant="outlined"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="First Name"
-                  autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  variant="outlined"
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="lname"
-                />
-              </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sx={{mb: 2 }}>
                 <TextField
                   variant="outlined"
                   required
@@ -69,7 +45,7 @@ export default function CredentialsSignInPage() {
                   autoComplete="email"
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sx={{ mb: 2 }}>
                 <TextField
                   variant="outlined"
                   required
@@ -81,20 +57,19 @@ export default function CredentialsSignInPage() {
                   autoComplete="current-password"
                 />
               </Grid>
-            </Grid>
             <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 5, mb: 2 }}
             >
-              Sign Up
+              Let's Shop
             </Button>
             <Grid container justifyContent="center">
               <Grid item>
-                <Link href="/login" variant="body2">
-                  Already have an account? Sign in
+                <Link href="/register" variant="body2">
+                  Don't have an account? Sign up
                 </Link>
               </Grid>
             </Grid>

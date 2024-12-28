@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import Register from './components/Register'
+import Login from './components/Login'
 
 function App() {
 
@@ -14,14 +15,8 @@ function App() {
         <NavBar />
         <div className="container">
           <Routes>
-            {/* <Route exact path="/" element={<HomePage />} /> */}
-            {/* <Route exact path="/shop" element={<Shop />} /> */}
-            {/* <Route exact path="/product/:id" element={<ProductPage />} /> */}
-            {/* <Route exact path="/cart" element={<CartPage />} /> */}
-            {/* <Route exact path="/chat" element={<Chat />} /> */}
-            {/* <Route path="/login" element={<Login />} /> */}
+            <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            {/* <Route path="*" element={<PageNotFound />} /> */}
           </Routes>
         </div>
       </BrowserRouter>
