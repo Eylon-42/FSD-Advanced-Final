@@ -15,7 +15,7 @@ const NavBar: React.FC = () => {
 //   const navigate = useNavigate();
 //   const dispatch = useDispatch();
 //   const client = useSelector((state: RootState) => state.auth.client);
-    const client = 'hi'
+    const client = ''
 //   const cart = useSelector((state: RootState) => state.cart);
 //   const { cartItems } = cart;
 
